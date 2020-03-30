@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "star-clash-royale": {
@@ -28,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": []
           },
@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "star-clash-royale"
+    }
+  },
+  "defaultProject": "star-clash-royale",
+  "cli": {
+    "analytics": "fbb5b8b0-b19b-4d26-994a-e8551e6d5716"
+  }
 }
