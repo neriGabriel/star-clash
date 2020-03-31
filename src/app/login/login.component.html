@@ -1,22 +1,43 @@
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 <div class="container">
     <div class="row">
         <div class="col">
             <form>
                 <div class="form-group">
                   <label for="exampleInputEmail1">Login</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                  <input type="email" class="form-control" id="login" name="email" aria-describedby="emailHelp" [(ngModel)]="frmLogin.email" placeholder="starclashroyale@starclashroyale.com">
                 </div>
+
                 <div class="form-group">
                   <label for="exampleInputPassword1">Senha</label>
-                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                  <input type="password" class="form-control" id="senha" name="senha" [(ngModel)]="frmLogin.senha" placeholder="********************">
                 </div>
-                <div class="form-group form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+
+                <div class="d-flex justify-content-end">
+                    <button type="button" class="btn btn-danger" style="width: 20%">
+                      <i class="fa fa-google" aria-hidden="true"></i>
+                    </button>
+                    &nbsp;
+                    <button type="button" class="btn btn-primary" style="width: 20%">
+                      <i class="fa fa-facebook" aria-hidden="true"></i>
+                    </button>
+                    &nbsp;
+                    <button type="submit" class="btn btn-info" style="width: 20%" (click)="login()">
+                      Entrar
+                      <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                   </button>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
               </form>
+
+
+              <div class="d-flex justify-content-end">
+
+                <div class="form-group">
+                  <a href="#">Criar nova conta</a>
+                  <br />&nbsp;&nbsp;
+                  <a href="#">Lembrar senha</a>
+                </div>
+              </div>
         </div>
     </div>
 </div>
